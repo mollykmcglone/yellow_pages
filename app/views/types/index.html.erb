@@ -1,0 +1,7 @@
+<h1>Types</h1>
+
+<ul>
+  <% @types.each do |type| %>
+    <li><%= link_to type.name, type_path(type) %></li>
+  <% end %>
+</ul>
