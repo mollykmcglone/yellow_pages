@@ -1,5 +1,6 @@
 <h1><%= @type.name %></h1>
 
-<p>
-  <%= link_to "Return to types", types_path %>
-</p>
+<p><%= link_to "Edit", edit_type_path(@type) %></p>
+<p><%= link_to "Delete", type_path(@type),
+                          :data => {:confirm => "Are you sure?",
+                                    :method => "delete"} %></p>

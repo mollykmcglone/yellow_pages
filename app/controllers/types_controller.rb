@@ -37,6 +37,12 @@ class TypesController < ApplicationController
     end
   end
 
+  def destroy
+    @type = Type.find(params[:id])
+    @type.destroy
+    redirect_to types_path
+  end
+
   private
   def type_params
     params.require(:type).permit(:name)

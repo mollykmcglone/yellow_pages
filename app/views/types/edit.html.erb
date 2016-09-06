@@ -1,16 +1,3 @@
 <h1>Edit type</h1>
 
-<% if @type.errors.any? %>
-  <h3>Please fix these errors:</h3>
-  <ul>
-    <% @type.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= form_for @type do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+<%= render "form" %>
